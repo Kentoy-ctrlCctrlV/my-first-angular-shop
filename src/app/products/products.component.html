@@ -1,0 +1,6 @@
+<div class="products">
+  <div class="product-card" *ngFor="let item of products"> <h3>{{ item.name }}</h3> <p>Price: ${{ item.price }}</p> <p *ngIf="item.available; else outStock">Available</p> <ng-template #outStock>
+      <p style="color:red;">Out of Stock</p> </ng-template>
+
+    <button (click)="addToCart(item)">Add to Cart</button> </div>
+</div>
